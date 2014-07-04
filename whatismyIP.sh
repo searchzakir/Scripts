@@ -6,5 +6,12 @@
 logger -s "running script ($0) by user (`whoami`) and pid = ($$)"
 
 
-# Initialising the Script Output File
-OUT="/tmp/machine-hardware-configuration-details-`hostname -f`.out"
+#curl -L0 http://checkip.org | grep 'IP Address' | awk -F '>' '{ print $3 }' | awk -F '<' '{ print $1 }'
+
+#curl -s ifconfig.me
+
+curl http://wooledge.org/myip.cgi
+
+#time curl ifconfig.me
+#time curl http://wooledge.org/myip.cgi
+

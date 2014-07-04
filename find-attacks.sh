@@ -17,7 +17,7 @@ OUTFile=/tmp/netstat-pant.out
 
 echo "`date`" >> $OUTFile
 echo "`hostname`" >> $OUTFile
-echo >> $OUTFile
+echo -e "\n\n" >> $OUTFile
 echo "===================================================" >> $OUTFile
 #netstat -pant | awk '{print $4,$5}' | egrep -w '(6660|6667|7000)' >> $OUTFile
 netstat -pant | awk '{print $4,$5}' | egrep -w '(6660|6667|7000)'
@@ -32,8 +32,7 @@ then
 	done
 
 	echo "===================================================" >> $OUTFile
-	echo >> $OUTFile
-	echo >> $OUTFile
+	echo -e "\n\n" >> $OUTFile
 	echo "Killed pid's of relavant connections given above" >> $OUTFile
 	echo >> $OUTFile
 	netstat -pant | awk '{print $4,$5}' | egrep -w '(6660|6667|7000)' >> $OUTFile

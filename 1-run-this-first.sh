@@ -5,7 +5,11 @@
 
 logger -s "running script ($0) by user (`whoami`) and pid = ($$)"
 
-
+#
+# I normally run this script first on every server whenever I login manually on that server or instance for any further work or for debugging purpose
+# This script considers that a postfix mail server is actually running where this script is gonna run
+# For web servers, things are different & thus so are respective commands
+#
 echo "========================================================================================"
 echo "whatismyIP.sh:"
 echo ""
@@ -37,7 +41,7 @@ du -sch /var/spool/postfix/*
 echo "========================================================================================"
 echo "ls -lsrth /var/log/maillog*:"
 echo ""
-ls -lh /var/log/maillog*
+ls -lsrth /var/log/maillog*
 echo "========================================================================================"
 echo "tail /var/log/maillog:"
 echo ""
