@@ -9,6 +9,9 @@ logger -s "running script ($0) by user (`whoami`) and pid = ($$)"
 # Every postfix server/instance must have script remove-bogus-corrupted-mails.sh & run periodically [hourly,etc depending on the mail load on this server] via crontab
 #
 
+# The main aim of this script is to COUNT the TOTAL Number of Bogus Mails
+# Ideally should be invoked by Cron at the end of the day [say .. 23:55:00] & thus should be entered in crontab file
+
 # Initializing the Output File
 File="/tmp/find-bogus-files-count-out.txt"
 > $File
