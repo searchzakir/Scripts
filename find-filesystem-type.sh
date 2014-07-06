@@ -5,6 +5,10 @@
 
 /bin/logger -s " running script ($0) by user (`whoami`) and pid = ($$)"
 
+# just a random simple script to find the file system type on the server
+# this can be invoked on the servers remotely & can be parsed to some other script for info gathering
+# but again there are better tools available than this script to get the job done :)
+
 echo "P.S. There are many ways to find the FS Type of the system ..."
 echo
 echo
