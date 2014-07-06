@@ -5,6 +5,7 @@
 
 /bin/logger -s " running script ($0) by user (`whoami`) and pid = ($$)"
 
+# Instead of IST, we can Set the TimeZone anything we like depending upon our preference or the requirements :)
 
 if [ -e /usr/share/zoneinfo/Asia/Calcutta ]
 then
@@ -21,6 +22,7 @@ then
 				yum install ntpdate
 		fi
 # Check this out --> http://www.pool.ntp.org/en/
+# Ensure to use proper & appropriate ntp pool server/s
         ntpdate 0.asia.pool.ntp.org
 	if [ $? = 0 ]
 		then
