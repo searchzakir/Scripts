@@ -6,6 +6,10 @@
 logger -s "running script ($0) by user (`whoami`) and pid = ($$)"
 
 
+# It is always better to know first hand the machine's or server's hardware configuration
+# If you want to have Virtual Machines, then script can be handy to know info about the main server on which the VM's will be forked, as & when required
+# 
+
 # Initialising the Script Output File
 OUT="/tmp/machine-hardware-configuration-details-`hostname -f`.out"
 > $OUT
