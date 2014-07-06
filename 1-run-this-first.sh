@@ -35,6 +35,10 @@ echo "df -h:"
 echo ""
 df -h
 echo "========================================================================================"
+echo "tail /var/log/messages:"
+echo ""
+tail /var/log/messages
+echo "========================================================================================"
 echo "du -sch /var/spool/postfix/*:"
 echo ""
 du -sch /var/spool/postfix/*
