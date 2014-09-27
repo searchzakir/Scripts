@@ -14,9 +14,9 @@ logger -s "running script ($0) by user (`whoami`) and pid = ($$)"
 # Script will take too much time for extremely large mail queue size
 
 # When the server load is HIGH due to mail load [obvioulsy because of too much disk i/o],
-# the "mailq" command does not respond & hangs.
+# the "mailq" command does not respond & hangs/freezes.
 # Best workaround is to get an idea of HOW MUCH SIZE is of mail queue rather than finding HOW MANY mails are there
-# And it can be easilt achieved using command "du -sch /var/spool/postfix*" [unless you have custom pool location]
+# And it can be easily achieved using command "du -sch /var/spool/postfix*" [unless you have custom pool location]
 #
 # This script should be invoked by Cron .. say every few hours.
 # Removing bogus & corrupted mails from theh mail queue is a very good idea from the performance perspective
